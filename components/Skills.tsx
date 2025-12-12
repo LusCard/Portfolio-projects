@@ -42,7 +42,7 @@ export default function Skills() {
     return (
         <Section id="skills" title="Habilidades">
             <p className="mb-8 text-lg text-[#ccd6f6]">
-                Here are the core technologies and domains I leverage for building full-stack and data-driven solutions:
+                Aquí están las tecnologías y dominios principales que utilizo para construir soluciones full-stack y basadas en datos:
             </p>
 
             {Object.entries(categorizedSkills).map(([category, skills]) => (

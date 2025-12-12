@@ -13,12 +13,12 @@ export default function Experience() {
                 "Implementación de funcionalidades de tiempo real (foros y chat) con Socket.io e integración de servicios de Inteligencia Artificial para un módulo de trivia.",
                 "Desarrollo de la sección 'Perfil de Usuario' con métricas de gamificación y gestión de datos bibliográficos."
             ],
-            video: null // Placeholder for future use
+            video: "/assets/videos/LediMob.mp4"
         }
     ];
 
     return (
-        <Section id="experience" title="Experience">
+        <Section id="experience" title="Mi Experiencia">
             <div className="space-y-12">
                 {experiences.map((exp, index) => (
                     <div key={index} className="flex flex-col md:flex-row gap-8 bg-[#112240] p-6 rounded-lg shadow-xl hover:-translate-y-2 transition-transform duration-300">
@@ -36,25 +36,20 @@ export default function Experience() {
                             </ul>
                         </div>
 
-                        {/* Video Card */}
                         {exp.video && (
-                            <div className="w-full md:w-1/3 flex-shrink-0">
-                                <div className="aspect-video bg-[#0a192f] rounded-lg overflow-hidden border border-[#233554] shadow-lg flex items-center justify-center relative group">
-                                    {/* Placeholder for actual video or thumbnail */}
-                                    <div className="absolute inset-0 flex items-center justify-center text-[#64ffda] opacity-50 group-hover:opacity-100 transition-opacity">
-                                        <span className="text-4xl">▶</span>
-                                    </div>
+                            <div className="w-full md:w-auto flex-shrink-0 flex flex-col items-center">
+                                <div className="w-64 aspect-[9/16] bg-[#0a192f] rounded-2xl overflow-hidden border-4 border-[#233554] shadow-lg flex items-center justify-center relative group">
                                     <video
+                                        autoPlay
                                         src={exp.video}
                                         className="w-full h-full object-cover"
                                         controls
                                         muted
                                         loop
                                     >
-                                        Your browser does not support the video tag.
+                                        Tu navegador no soporta el tag de video.
                                     </video>
                                 </div>
-                                <p className="text-center text-sm text-[#8892b0] mt-2 italic">Feature Demo</p>
                             </div>
                         )}
                     </div>

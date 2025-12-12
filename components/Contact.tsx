@@ -1,16 +1,14 @@
 import React from 'react';
 import Section from './Section';
-// Importamos los iconos específicos que se necesitan
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6"; // Asumo que quieres este para Instagram
+import { FaInstagram } from "react-icons/fa6";
 
-// Datos de contacto de Lucas Cárdenas, ahora con el componente de icono
-const contactItems = [
+const contactDetails = [
     {
         title: "Email",
         value: "luquiscardenas@gmail.com",
         link: "mailto:luquiscardenas@gmail.com",
-        IconComponent: FaEnvelope, // Usamos el componente como propiedad
+        IconComponent: FaEnvelope,
         description: "Envíame un correo directamente."
     },
     {
@@ -19,58 +17,51 @@ const contactItems = [
         link: "tel:+543718521146",
         IconComponent: FaPhone,
         description: "Contáctame por llamada o WhatsApp."
-    },
+    }
+];
+
+const socialLinks = [
     {
         title: "LinkedIn",
-        value: "linkedin.com/in/lucas-cárdenas-370255297",
         link: "https://linkedin.com/in/lucas-cárdenas-370255297",
         IconComponent: FaLinkedin,
-        description: "Mi perfil profesional y red de contactos."
     },
     {
         title: "GitHub",
-        value: "github.com/LusCard",
         link: "https://github.com/LusCard",
         IconComponent: FaGithub,
-        description: "Revisa mis proyectos y código fuente."
     },
     {
         title: "Instagram",
-        value: "@luscard_placeholder", // Reemplaza con tu usuario real
-        link: "https://instagram.com/luscard_placeholder", // Reemplaza con tu link real
+        link: "https://www.instagram.com/lucascardenas01/",
         IconComponent: FaInstagram,
-        description: "Sígueme en redes sociales."
     }
 ];
 
 export default function Contact() {
     return (
-        <Section id="contact" title="Get In Touch">
+        <Section id="contact" title="Mis redes">
             <div className="max-w-4xl mx-auto text-center">
                 <p className="mb-10 text-lg text-[#ccd6f6]">
-                    I'm currently looking for new opportunities, and my inbox is always open. Whether you have a question or just want to say hi, feel free to reach out using any of these channels!
+                    Estoy disponible para nuevos proyectos, y mi bandeja de entrada siempre está abierta. Si tienes alguna pregunta o solo quieres saludarme, no dudes en contactarme por cualquiera de estos canales!
                 </p>
 
-                {/* Grid de dos columnas para las tarjetas */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {contactItems.map((item, index) => {
-                        // Desestructuramos el componente del ícono
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                    {contactDetails.map((item, index) => {
                         const Icon = item.IconComponent;
-
                         return (
                             <a
                                 key={index}
                                 href={item.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block p-6 rounded-lg border border-[#303c55] bg-[#112240] hover:border-[#64ffda] transition-all duration-300 transform hover:-translate-y-1 text-left"
+                                className="block p-6 rounded-lg border border-[#303c55] bg-[#112240] hover:border-[#64ffda] transition-all duration-300 transform hover:-translate-y-1 text-left group"
                             >
                                 <div className="flex items-start space-x-4">
-                                    {/* Renderizamos el componente del ícono aquí */}
-                                    {Icon && <Icon className="w-8 h-8 text-[#64ffda] min-w-[2rem]" />}
-                                    <div>
+                                    <div className="p-3 bg-[#1d2d50] rounded-full group-hover:text-[#64ffda] transition-colors">
+                                        <Icon className="w-6 h-6 text-[#64ffda]" />
+                                    </div>
+                                    <div className="overflow-hidden">
                                         <h3 className="text-xl font-bold text-[#ccd6f6] mb-1">{item.title}</h3>
-                                        <p className="text-lg text-[#8892b0] font-mono break-all">{item.value}</p>
+                                        <p className="text-lg text-[#8892b0] font-mono break-all group-hover:text-[#64ffda] transition-colors">{item.value}</p>
                                         <p className="mt-2 text-sm text-[#8892b0]">{item.description}</p>
                                     </div>
                                 </div>
@@ -79,8 +70,26 @@ export default function Contact() {
                     })}
                 </div>
 
+                <div className="flex flex-wrap justify-center gap-6 relative z-10">
+                    {socialLinks.map((item, index) => {
+                        const Icon = item.IconComponent;
+                        return (
+                            <a
+                                key={index}
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 px-8 py-4 bg-[#112240] border border-[#303c55] rounded-lg text-[#ccd6f6] hover:text-[#0a192f] hover:bg-[#64ffda] hover:border-[#64ffda] transition-all duration-300 transform hover:-translate-y-1 shadow-lg relative z-20 cursor-pointer"
+                            >
+                                <Icon className="w-6 h-6" />
+                                <span className="text-lg font-medium">{item.title}</span>
+                            </a>
+                        );
+                    })}
+                </div>
+
                 <p className="mt-16 text-sm text-[#8892b0]">
-                    Designed and Built by Lucas Cárdenas
+                    Diseñado y construido por Lucas Cárdenas
                 </p>
             </div>
         </Section>

@@ -1,20 +1,20 @@
 # Lucas Cárdenas - Portfolio
 
-Welcome to the source code of my personal portfolio website.
+Bienvenido al código fuente de mi sitio web de portafolio personal.
 
-## 🚀 About
-This portfolio showcases my experience, skills, and projects as a software developer. It is built with a space-themed design and modern web technologies.
+## About
+Este portafolio muestra mi experiencia, habilidades y proyectos como desarrollador de software. Está construido con un diseño temático espacial y tecnologías web modernas.
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Deployment**: GitHub Pages
+- **Deployment**: Vercel
 
-## 🌐 Live Demo
-You can view the live site here: [https://LusCard.github.io/Portfolio-projects/](https://LusCard.github.io/Portfolio-projects/)
+## Live Demo
+Puedes ver el sitio web en vivo aquí: https://portfolio-projects-dusky.vercel.app/
 
-## 🏃‍♂️ Running Locally
+## Running Locally
 
 1. Clone the repository:
    ```bash
@@ -31,4 +31,4 @@ You can view the live site here: [https://LusCard.github.io/Portfolio-projects/]
    npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Abre [http://localhost:3000](http://localhost:3000) con tu navegador para ver el resultado.
