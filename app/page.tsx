@@ -26,7 +26,7 @@ export default function Home() {
               <h1 className="text-5xl md:text-7xl font-bold text-[#ccd6f6] mb-4">Lucas Cárdenas.</h1>
               <h2 className="text-4xl md:text-6xl font-bold text-[#8892b0] mb-8">Soy un programador.</h2>
               <p className="max-w-xl text-[#8892b0] text-lg leading-relaxed mb-10">
-                Soy un desarrollador web con experiencia en el desarrollo de aplicaciones web y móviles.
+                Soy un desarrollador de software con experiencia en el desarrollo de aplicaciones web y móviles.
               </p>
 
             </div>
